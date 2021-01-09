@@ -1,5 +1,5 @@
-$(function()
-    {$('.slider').slick({
+$(function(){
+    $('.slider').slick({
     autoplay:true,
     autoplaySpeed:5000,
     dots:true,
@@ -18,6 +18,14 @@ $(document).ready(function() {
     pagetop.click(function () {
         $('body, html').animate({ scrollTop: 0 }, 500);
         return false;
+    });
+});
+
+$(function(){
+    $("#accordion_category dt").on("click", function() {
+    $(this).next().slideToggle();
+    $(this).next().next().slideToggle();
+    $(this).toggleClass('active');
     });
 });
     
